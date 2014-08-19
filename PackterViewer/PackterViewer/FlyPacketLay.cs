@@ -180,10 +180,7 @@ namespace PackterViewer
             byte imageNumber = this.PacketImageNumber;
             string fileName = this.PacketImageString;
             GameTime nowGameTime = new GameTime(
-                /* TODO: Ç«Ç§Ç‚ÇÁ XNA4.0 ÇÃ GameTime Ç©ÇÁÇÕ RealTime ÇÃäTîOÇ™Ç»Ç≠Ç»Ç¡ÇΩÇÊÇ§Ç≈Ç∑ÅH
-                 this.startGameTime.TotalRealTime + diffTimeSpan
-                , this.startGameTime.ElapsedRealTime + diffTimeSpan
-                , */this.startGameTime.TotalGameTime + diffTimeSpan
+                this.startGameTime.TotalGameTime + diffTimeSpan
                 , this.startGameTime.ElapsedGameTime + diffTimeSpan);
 
             Vector3 startPoint = new Vector3((srcX - 0.5f) * 100.0f * 2 - defaultScale / 4.0f,

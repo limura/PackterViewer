@@ -116,10 +116,7 @@ namespace PackterViewer
                 Invalidate();
                 DateTime nowTime = DateTime.Now;
                 GameTime time = new GameTime(new TimeSpan((nowTime.Ticks - startDateTime.Ticks) * 1)
-                    , new TimeSpan((nowTime.Ticks - prevDateTime.Ticks) * 1)
-                    /* TODO: 引数が2つに減ってるので減らします。
-                    , new TimeSpan((nowTime.Ticks - startDateTime.Ticks) * 1)
-                    , new TimeSpan((nowTime.Ticks - prevDateTime.Ticks) * 1)*/);
+                    , new TimeSpan((nowTime.Ticks - prevDateTime.Ticks) * 1));
                 currentGameTime = time;
                 prevDateTime = nowTime;
                 this.UpdateSene(time);
@@ -152,10 +149,7 @@ namespace PackterViewer
 
                 TimeSpan addTimeSpan = new TimeSpan(0, 0, 0, 0, flyMillisecond / fogCount / 5 * i);
                 GameTime targetGameTime = new GameTime(
-                        /* TODO: どうやら XNA4.0 の GameTime からは RealTime の概念がなくなったようです？
-                         startGameTime.TotalRealTime.Add(addTimeSpan)
-                        , startGameTime.ElapsedRealTime.Add(addTimeSpan)
-                        , */startGameTime.TotalGameTime.Add(addTimeSpan)
+                        startGameTime.TotalGameTime.Add(addTimeSpan)
                         , startGameTime.ElapsedGameTime.Add(addTimeSpan));
                 PacketBoard pb = new PacketBoardLay(targetModel, targetTexture
                     , startPoint, endPoint, targetGameTime,  flyMillisecond, "");

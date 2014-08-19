@@ -124,9 +124,11 @@
     <Compile Include="SpriteFontControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SquareTexture.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ExampleFiles\Config.txt" />
+    <Content Include="ExampleFiles\Config_e.txt" />
+    <Content Include="ExampleFiles\Config_sample.txt" />
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png">
       <XnaPlatformSpecific>true</XnaPlatformSpecific>
